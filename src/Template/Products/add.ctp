@@ -63,12 +63,14 @@
 
     $(function () {
         $('#date_elaboration').datetimepicker({ 
-            format: 'YYYY-MM-DD hh:mm:ss'
+            format: 'YYYY-MM-DD hh:mm:ss',
+            locale: 'es'
 
         });
         $('#date_expiration').datetimepicker({ 
             useCurrent: false ,//Important! See issue #1075
-            format: 'YYYY-MM-DD hh:mm:ss'
+            format: 'YYYY-MM-DD hh:mm:ss',
+            locale: 'es'
         });
         $("#date_elaboration").on("dp.change", function (e) {
             $('#date_expiration').data("DateTimePicker").minDate(e.date);
